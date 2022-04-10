@@ -1,0 +1,195 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(0deg, rgba(97,16,153,1) 25%, rgba(253,187,45,1) 100%);
+}
+
+.container{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    display: grid;
+    /* define como minhas areas vão ficar dispostas */
+    grid-template-areas: 
+    "nav nav nav nav"
+    "header header header header "
+    "main main main aside"
+    "footer footer footer footer";
+
+    grid-gap: 0.5em;
+
+    /*tamanho da coluna, vai pegar as colunas da minha tela*/
+    grid-template-columns: auto auto auto auto;
+
+    /* altura das linhas */
+    grid-template-rows: auto auto auto auto;
+}
+
+
+.container *{
+    background-color: rgb(211, 124, 255);
+    font-family: 'Shadows Into Light', cursive;
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+header{
+    grid-area: header;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+nav{
+    grid-area: nav;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+nav img{
+    width: 60px;
+    height: 60px;
+}
+
+nav a{
+    text-decoration: none;
+    /* padding: 0.3em 1em; */
+}
+
+.link:hover{
+    color: rgb(252, 252, 252);
+}
+
+main{
+    grid-area: main;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+main p{
+    padding: 5px;
+}
+
+main img{
+    width: 50%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+aside{
+    width: 28em;
+    grid-area: aside;
+    border: 1px solid black;
+    border-radius: 5px ;
+}
+
+aside p{
+    padding: 2px;
+}
+
+footer{
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    padding: 0px 8px;
+}
+
+.image1{
+    width: 20px;
+    height: 20px;
+    transition: 1s;
+}
+
+.image2{
+    width: 20px;
+    height: 20px;
+    transition: 1s;
+}
+
+.image3{
+    width: 20px;
+    height: 20px;
+    transition: 1s;
+}
+
+.image1:hover{
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+.image2:hover{
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+.image3:hover{
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+@media screen and (max-width: 899px) {
+
+    .container{
+        display: grid;
+        /* define como minhas areas vão ficar dispostas */
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "aside"
+        "footer";
+    
+        grid-gap: 0.5em;
+    
+        /*tamanho da coluna, vai pegar as colunas da minha tela*/
+        grid-template-columns: auto;
+    
+        /* altura das linhas */
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    header{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    main{
+        width: 100%;
+        height: 120vh;
+    }
+
+    aside{
+        width: 100%;
+        height: 50vh;
+
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+
+    
+}
